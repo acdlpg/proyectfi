@@ -1,0 +1,35 @@
+.image-button{
+    position: fixed;
+    top: 200px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-image: url(../assets/img/accesibilidad/accesibilidad.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    transition: transform 0.2s;
+    border-radius: 30px;
+
+}
+
+.image-button:active{
+    transform: scale(0.80);
+}
+
+.texto-grande{
+    font-size: 18px;
+}
+
+.texto-normal{
+    font-size: 14px;
+}
+
+.link-grande{
+    background-color: yellow;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    font-family: "Metropolis", sans-serif;
+}

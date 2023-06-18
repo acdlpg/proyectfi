@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<router-outlet ></router-outlet>
+<app-accesibilidad *ngIf="mostrar"></app-accesibilidad>
+<button
+  class="image-button"
+  (click)="alternar()"
+  alt="Boton de Accesibilidad"
+  aria-label="Boton de Accesibilidad"
+></button>
+<app-footer></app-footer>

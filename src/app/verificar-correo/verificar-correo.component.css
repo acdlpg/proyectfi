@@ -1,0 +1,11 @@
+.boton {
+    background-color: #596bb0;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .boton:hover {
+    background-color: #3e4d8a;
+    color: white;
+  }

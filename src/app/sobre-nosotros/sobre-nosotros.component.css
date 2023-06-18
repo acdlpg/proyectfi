@@ -1,0 +1,29 @@
+.texto-grande{
+    font-size: larger;
+}
+
+.link-grande{
+    background-color: yellow;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    font-family: "Metropolis", sans-serif;
+}
+
+.texto-alineado{
+    text-align: justify;
+}
+
+.boton {
+    background-color: #596bb0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    border-color: #596bb0;
+  }
+  
+  .boton:hover, .boton:active {
+    background-color: #3e4d8a;
+    color: white;
+  }

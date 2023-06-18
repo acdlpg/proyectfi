@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 d-flex flex-column align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">QR</h5>
+            <p class="card-text">Presiona el boton para generar un nuevo QR</p>
+        
+            <ngx-qrcode
+              [elementType]="element"
+              [errorCorrectionLevel]="correction"
+              [value]="value"
+            >
+            </ngx-qrcode>
+        
+            <a href="#" class="btn btn-primary" (click)="cambiarQR()">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

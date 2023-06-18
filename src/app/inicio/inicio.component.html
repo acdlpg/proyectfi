@@ -1,0 +1,220 @@
+<div class="fondo" style="background-image: url('assets/img/fondo3.jpg')">
+  <div
+    class="encima container-fluid"
+    [ngClass]="{
+      'texto-grande': accService.letraGrandeBooleanServicio,
+      'texto-alineado': accService.alinearTextoBooleanServicio
+    }"
+  >
+    <div class="encima2">
+      <p class="t1" style="font-size: 2.5em" (mouseenter)="leerTexto1($event)">
+        ¡Bienvenido a CineFaction!
+      </p>
+      <p (mouseenter)="leerTexto1($event)" class="t">
+        El lugar perfecto para rentar
+        <span style="color: #d261fb">SALAS DE CINE PRIVADAS</span> en donde
+        podrás ver tus películas favoritas
+      </p>
+      <a
+        [ngClass]="{
+          'link-grande': accService.linkResaltadoBooleanServicio,
+          'btn shadow-lg boton': !accService.linkResaltadoBooleanServicio
+        }"
+        (mouseenter)="leerTexto1($event)"
+        routerLink="/contenido"
+        >Revisar catálogo</a
+      >
+      <a
+        class="icono"
+        [ngClass]="{
+          'link-grande2': accService.linkResaltadoBooleanServicio
+        }"
+        (click)="desplazar()"
+        ><i class="pi pi-chevron-down" style="font-size: 2rem"></i
+      ></a>
+    </div>
+  </div>
+</div>
+<div class="container mt-3" id="estrenos">
+  <h2 class="text-center" (mouseenter)="leerTexto1($event)">
+    Nuestros próximos estrenos
+  </h2>
+  <h5
+    class="text-center"
+    [ngClass]="{
+      'texto-grande2': accService.letraGrandeBooleanServicio,
+      'texto-alineado': accService.alinearTextoBooleanServicio
+    }"
+    (mouseenter)="leerTexto1($event)"
+  >
+    Nuestra cartelera va creciendo con el tiempo, pues las películas se quedan
+    de forma permanente
+  </h5>
+  <div class="row mt-5">
+    <div class="col-md-5 col-lg-3 col-xl-3 col-sm-8 tarjeta">
+      <p-card header="Pulp Fiction" (mouseenter)="leerTexto2($event)">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/premiere1.jpg" />
+        </ng-template>
+        <p
+          [ngClass]="{ 'texto-grande': accService.letraGrandeBooleanServicio }"
+          (mouseenter)="leerTexto1($event)"
+        >
+          <span
+            class="h6"
+            [ngClass]="{
+              'texto-grande3': accService.letraGrandeBooleanServicio
+            }"
+            >Director: </span
+          >Quentin Tarantino
+        </p>
+      </p-card>
+    </div>
+
+    <div class="col-md-5 col-lg-3 col-xl-3 col-sm-8 tarjeta">
+      <p-card header="Forrest Gump" (mouseenter)="leerTexto2($event)">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/premiere2.jpg" />
+        </ng-template>
+        <p
+          [ngClass]="{ 'texto-grande': accService.letraGrandeBooleanServicio }"
+          (mouseenter)="leerTexto1($event)">
+          <span
+            class="h6"
+            [ngClass]="{
+              'texto-grande3': accService.letraGrandeBooleanServicio
+            }"
+            >Director: </span
+          >Robert Zemeckis
+        </p>
+      </p-card>
+    </div>
+
+    <div class="col-md-5 col-lg-3 col-xl-3 col-sm-8 tarjeta">
+      <p-card header="Matrix"(mouseenter)="leerTexto2($event)">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/premiere3.jpg" />
+        </ng-template>
+        <p
+          [ngClass]="{ 'texto-grande': accService.letraGrandeBooleanServicio }"
+          (mouseenter)="leerTexto1($event)">
+          <span
+            class="h6"
+            [ngClass]="{
+              'texto-grande3': accService.letraGrandeBooleanServicio
+            }"
+            >Director: </span
+          >Lilly Wachowski
+        </p>
+      </p-card>
+    </div>
+
+    <div class="col-md-5 col-lg-3 col-xl-3 col-sm-8 tarjeta">
+      <p-card header="Fight Club"(mouseenter)="leerTexto2($event)">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/premiere4.jpg" />
+        </ng-template>
+        <p
+          [ngClass]="{ 'texto-grande': accService.letraGrandeBooleanServicio }"
+          (mouseenter)="leerTexto1($event)">
+          <span
+            class="h6"
+            [ngClass]="{
+              'texto-grande3': accService.letraGrandeBooleanServicio
+            }"
+            >Director: </span
+          >David Fincher
+        </p>
+      </p-card>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-5 col-lg-3 col-xl-3 col-sm-8 tarjeta">
+      <p-card header="Titanic"(mouseenter)="leerTexto2($event)">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/premiere5.jpg" />
+        </ng-template>
+        <p
+          [ngClass]="{ 'texto-grande': accService.letraGrandeBooleanServicio }"
+          (mouseenter)="leerTexto1($event)">
+          <span
+            class="h6"
+            [ngClass]="{
+              'texto-grande3': accService.letraGrandeBooleanServicio
+            }"
+            >Director: </span
+          >James Cameron
+        </p>
+      </p-card>
+    </div>
+
+    <div class="col-md-5 col-lg-3 col-sm-8 tarjeta">
+      <p-card header="The Lion King"(mouseenter)="leerTexto2($event)">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/premiere6.jpg" />
+        </ng-template>
+        <p
+          [ngClass]="{ 'texto-grande': accService.letraGrandeBooleanServicio }"
+          (mouseenter)="leerTexto1($event)">
+          <span
+            class="h6"
+            [ngClass]="{
+              'texto-grande3': accService.letraGrandeBooleanServicio
+            }"
+            >Director: </span
+          >Rob Minkoff
+        </p>
+      </p-card>
+    </div>
+
+    <div class="col-md-5 col-lg-3 col-sm-8 tarjeta">
+      <p-card header="Inception"(mouseenter)="leerTexto2($event)">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/premiere7.jpg" />
+        </ng-template>
+        <p
+          [ngClass]="{ 'texto-grande': accService.letraGrandeBooleanServicio }"
+          (mouseenter)="leerTexto1($event)">
+          <span
+            class="h6"
+            [ngClass]="{
+              'texto-grande3': accService.letraGrandeBooleanServicio
+            }"
+            >Director: </span
+          >Christopher Nolan
+        </p>
+      </p-card>
+    </div>
+
+    <div class="col-md-5 col-lg-3 col-sm-8 tarjeta">
+      <p-card header="Trainspotting"(mouseenter)="leerTexto2($event)">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/premiere8.jpg" />
+        </ng-template>
+        <p
+          [ngClass]="{ 'texto-grande': accService.letraGrandeBooleanServicio }"
+          (mouseenter)="leerTexto1($event)">
+          <span
+            class="h6"
+            [ngClass]="{
+              'texto-grande3': accService.letraGrandeBooleanServicio
+            }"
+            >Director: </span
+          >Danny Boyle
+        </p>
+      </p-card>
+    </div>
+  </div>
+  <div class="container my-5 text-center">
+    <a
+      [ngClass]="{
+        'link-grande': accService.linkResaltadoBooleanServicio,
+        'btn shadow-lg boton': !accService.linkResaltadoBooleanServicio
+      }"
+      routerLink="/proximamente"
+      (mouseenter)="leerTexto1($event)"
+      >Ver todos</a
+    >
+  </div>
+</div>

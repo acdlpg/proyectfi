@@ -1,0 +1,101 @@
+<div class="sidebar">
+  <div class="contenedor">
+    <div
+      class="box2"
+      [ngClass]="{
+        'margen-arriba-letra': accService.letraGrandeBooleanServicio, 
+        'margen-arriba-link': accService.linkResaltadoBooleanServicio
+      }"
+    >
+      <!--Revisar la combinacion de valores-->
+
+      <p class="titulo2">Menu de Accesibilidad</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="box" [ngClass]="{ 'boton-presionado': botonPresionado1 }">
+      Lector de Pantalla
+      <!--<textarea [(ngModel)]="texto1" cols="10" rows="5" placeholder="Ingresa el texto a leer" ></textarea>
+          
+          <button id="leer" (click)="leerTexto(texto1)">Leer recuadro</button>
+          -->
+      <img
+        id="icon1"
+        src="../../assets/img/accesibilidad/leer.png"
+        alt=""
+        style="padding-top: 12px"
+        (click)="leerTexto1()"
+      />
+    </div>
+    <div class="box" [ngClass]="{ 'boton-presionado': botonPresionado2 }">
+      Agrandar Texto
+      <img
+        id="icon2"
+        src="../../assets/img/accesibilidad/letra.png"
+        (click)="agrandarTexto2()"
+        (click)="botonPresionadoFuncion2()"
+        alt=""
+      />
+    </div>
+    <div class="box" [ngClass]="{ 'boton-presionado': botonPresionado3 }">
+      Resaltar Enlaces
+      <img
+        (click)="resaltarEnlaces1()"
+        (click)="botonPresionadoFuncion3()"
+        src="../../assets/img/accesibilidad/link2.png"
+        alt=""
+        id="icon3"
+      />
+    </div>
+    <div class="box" [ngClass]="{ 'boton-presionado': botonPresionado4 }">
+      Texto Alineado
+      <img
+        (click)="alinearTexto1()"
+        (click)="botonPresionadoFuncion4()"
+        src="../../assets/img/accesibilidad/align.png"
+        alt=""
+        id="icon4"
+      />
+    </div>
+  </div>
+
+  <div class="contenedor3">
+    <div class="box3">
+      <div class="boxLector">
+        <img
+          (click)="resumirLector1()"
+          
+        
+          (click)="botonPresionadoFuncion5()"
+          src="../../assets/img/accesibilidad/play.png"
+          id="icon1"
+        />
+      </div>
+      <div class="boxLector">
+        <img
+          (click)="pausarLector1()"
+          
+          (click)="botonPresionadoFuncion6()"
+          src="../../assets/img/accesibilidad/pausar.png"
+          id="icon1"
+        />
+      </div>
+      <div class="boxLector">
+        <img
+          (click)="cancelarLector1()"
+          
+          (click)="botonPresionadoFuncion7()"
+          src="../../assets/img/accesibilidad/cancelar.png"
+          id="icon1"
+        />
+      </div>
+    </div>
+
+    <div class="descripcion">
+      <p>Resumir</p>
+      <p>Pausar</p>
+      <p>Cancelar</p>
+    </div>
+  </div>
+</div>

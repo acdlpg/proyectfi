@@ -1,0 +1,69 @@
+<div class="container mt-5">
+  <div class="card-columns">
+    <div
+      class="card mb-4 shadow-sm p-3 mb-5 bg-white rounded"
+      *ngFor="let p of peliculas"
+    >
+      <img [src]="p.img" class="card-img-top" />
+
+      <div
+        class="card-body"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        <h5
+          [ngClass]="{
+            'texto-grande3': accService.letraGrandeBooleanServicio
+          }"
+          class="card-title"
+          (mouseenter)="leerTexto1($event)"
+        >
+          {{ p.nombre }}
+        </h5>
+        <p>
+          <button
+            [ngClass]="{
+              'link-grande': accService.linkResaltadoBooleanServicio,
+              'btn btn-light font-weight-bold':
+                !accService.linkResaltadoBooleanServicio,
+
+              'texto-grande': accService.letraGrandeBooleanServicio
+            }"
+            type="button"
+            data-toggle="collapse"
+            [attr.data-target]="'#collapse' + p.collapse"
+            aria-expanded="false"
+            (mouseenter)="leerTexto1($event)"
+          >
+            Sinopsis
+          </button>
+        </p>
+        <div class="collapse" [id]="'collapse' + p.collapse">
+          <div class="card card-body">
+            <h6 class="card-title" (mouseenter)="leerTexto1($event)">Sinopsis:</h6>
+            <p (mouseenter)="leerTexto1($event)">{{ p.sinopsis }}</p>
+          </div>
+        </div>
+        <p class="card-text" (mouseenter)="leerTexto1($event)"><span class="h6" >Año: </span> {{ p.year }}</p>
+        <p class="card-text" (mouseenter)="leerTexto1($event)">
+          <span class="h6">Duración: </span> {{ p.duracion }} min.
+        </p>
+        <p class="card-text" (mouseenter)="leerTexto1($event)">
+          <span class="h6">Director: </span> {{ p.director }}
+        </p>
+        <a
+          [ngClass]="{
+            'link-grande': accService.linkResaltadoBooleanServicio,
+            'btn': !accService.linkResaltadoBooleanServicio,
+            'texto-grande': accService.letraGrandeBooleanServicio
+          }"
+          (click)="enviarDatos(p, $event)"
+          (mouseenter)="leerTexto1($event)"
+          >Reservar sala</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

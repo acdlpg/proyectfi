@@ -1,0 +1,61 @@
+<div class="container mt-4">
+  <div
+    class="card mb-3 border-0"
+    *ngIf="datosPeliculaCompra.trailer.length > 0"
+  >
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img
+          [src]="datosPeliculaCompra.img"
+          style="max-width: 360px"
+          class="shadow p-3 mb-5 bg-white rounded"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{ datosPeliculaCompra.nombre }}</h2>
+          <div class="card-text">
+            <h6>Sinopsis:</h6>
+            <p class="text-justify">{{ datosPeliculaCompra.sinopsis }}</p>
+            <p><span class="h6">Año: </span>{{ datosPeliculaCompra.year }}</p>
+            <p>
+              <span class="h6">Duración: </span
+              >{{ datosPeliculaCompra.duracion }} min.
+            </p>
+            <p>
+              <span class="h6">Director: </span
+              >{{ datosPeliculaCompra.director }}
+            </p>
+            <h6>Trailer:</h6>
+            <iframe
+              *ngIf="datosPeliculaCompra.trailer.length > 0"
+              width="448"
+              height="252"
+              [src]="
+                datosPeliculaCompra.trailer
+                  | domseguro : 'https://www.youtube.com/embed/'
+              "
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="card-text mt-3">
+            <small class="text-muted"
+              >Géneros: {{ datosPeliculaCompra.generos.join(", ") }}</small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isLogged; else errorLogin">
+    <app-reserva [nombrePelicula]="datosPeliculaCompra.nombre"></app-reserva>
+  </div>
+  <ng-template #errorLogin>
+    <div class="alert alert-warning">
+      Se debe de iniciar sesión para poder registrar una cita.
+    </div>
+  </ng-template>
+</div>

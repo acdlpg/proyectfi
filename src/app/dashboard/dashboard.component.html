@@ -1,0 +1,38 @@
+<div class="container mb-5">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">¡Bienvenido!</h1>
+    <p class="fs-5 text-muted">
+      {{ dataUser?.displayName }}: {{ dataUser?.email || "N/A" }}
+    </p>
+  </div>
+  <hr />
+  <div class="shadow mt-3">
+    <p-table
+      [columns]="columns"
+      selectionMode="single"
+      [value]="users"
+      [tableStyle]="{ 'min-width': '50rem' }"
+      styleClass="p-datatable-striped"
+    >
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns" class="text-center">{{ col }}</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-user>
+        <tr>
+          <td style="text-align: center">{{ user.uid || "N/A" }}</td>
+          <td style="text-align: center">{{ user.displayName || "N/A" }}</td>
+          <td style="text-align: center">{{ user.email || "N/A" }}</td>
+          <td style="text-align: center">{{ user.phoneNumber || "N/A" }}</td>
+          <td style="text-align: center">{{ user.providersIds || "N/A" }}</td>
+        </tr>
+      </ng-template>
+    </p-table>   
+  </div>
+  <br>
+  <br>
+  <div class="chart-wrapper">
+    <app-chart></app-chart>
+    </div>
+</div>

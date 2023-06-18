@@ -1,0 +1,75 @@
+<div class="container my-5 text-center">
+  <h2
+    (mouseenter)="leerTexto1($event)"
+    [ngClass]="{ 'texto-grande4': accService.letraGrandeBooleanServicio }"
+  >
+    Nuestros próximos estrenos
+  </h2>
+  <h5
+    (mouseenter)="leerTexto1($event)"
+    class="mt-3"
+    [ngClass]="{ 'texto-grande3': accService.letraGrandeBooleanServicio }"
+  >
+    Trabajamos arduamente para traer las mejores películas a nuestra cartelera
+    con una calidad mínima de <span style="color: #ab31d7">4K</span>.
+  </h5>
+  <h6
+    (mouseenter)="leerTexto1($event)"
+    class="mt-4"
+    [ngClass]="{ 'texto-grande2': accService.letraGrandeBooleanServicio }"
+  >
+    Aquí una lista de las próximas películas que estarán disponibles en todas
+    las salas.
+  </h6>
+  <div class="shadow mt-3">
+    <p-table
+      [columns]="columns"
+      selectionMode="single"
+      [value]="array"
+      [tableStyle]="{ 'min-width': '60rem' }"
+      styleClass="p-datatable-striped"
+    >
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th
+            *ngFor="let col of columns"
+            class="text-center"
+            [ngClass]="{
+              'texto-grande': accService.letraGrandeBooleanServicio
+            }"
+            (mouseenter)="leerTexto1($event)"
+          >
+            {{ col }}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-pelicula>
+        <tr
+          [ngClass]="{
+            'texto-grande': accService.letraGrandeBooleanServicio
+          }"
+        >
+          <td style="text-align: center" (mouseenter)="leerTexto1($event)">
+            {{ pelicula.Title }}
+            
+          </td>
+          <td style="text-align: center" (mouseenter)="leerTexto1($event)">
+            {{ pelicula.Year }}
+          </td>
+          <td style="text-align: center" (mouseenter)="leerTexto1($event)">
+            {{ pelicula.Runtime }}
+          </td>
+          <td style="text-align: center" (mouseenter)="leerTexto1($event)">
+            {{ pelicula.Genre }}
+          </td>
+          <td style="text-align: center" (mouseenter)="leerTexto1($event)">
+            {{ pelicula.Director }}
+          </td>
+          <td style="text-align: center" (mouseenter)="leerTexto1($event)">
+            {{ pelicula.Actors }}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div> 

@@ -1,0 +1,402 @@
+<div
+  class="container mt-5"
+  [ngClass]="{
+    'texto-grande': accService.letraGrandeBooleanServicio,
+    'texto-alineado': accService.alinearTextoBooleanServicio
+  }"
+>
+  <h1
+    class="text-center"
+    (mouseenter)="leerTexto1($event)"
+    (mouseleave)="cancelarVoz()"
+  >
+    Nuestro equipo de trabajo
+  </h1>
+  <div class="row mt-3 d-flex justify-content-center">
+    <div class="card border-0" style="width: 90%">
+      <div class="card-body">
+        <h3 class="card-title text-center" (mouseenter)="leerTexto1($event)">
+          Sobre nosotros
+        </h3>
+        <p (mouseenter)="leerTexto1($event)" class="card-text">
+          En nuestro cine, nos apasiona brindar una experiencia única y
+          emocionante a todos nuestros espectadores. Desde nuestra apertura, nos
+          hemos comprometido a ser el destino preferido para los amantes del
+          cine en nuestra comunidad y más allá. Nos enorgullece ofrecer una
+          amplia selección de películas de alta calidad, junto con comodidades
+          modernas y un servicio excepcional. ¡Bienvenidos a nuestro mundo del
+          cine!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-2 d-flex justify-content-center">
+    <div class="card border-0" style="width: 90%">
+      <div class="card-body">
+        <h3 class="card-title text-center">Visión</h3>
+        <p class="card-text">
+          Nuestra visión es convertirnos en el principal destino cinematográfico
+          de nuestra región, reconocidos por nuestra excelencia en la selección
+          de películas y la calidad de nuestras instalaciones. Buscamos ser el
+          lugar al que la comunidad acuda no solo para disfrutar de películas,
+          sino también para experimentar eventos especiales, estrenos exclusivos
+          y actividades culturales relacionadas con el cine. Además, nos
+          esforzamos por fomentar una atmósfera acogedora y amigable, donde los
+          espectadores se sientan parte de nuestra familia cinematográfica.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-2 d-flex justify-content-center">
+    <div class="card border-0" style="width: 90%">
+      <div class="card-body">
+        <h3 class="card-title text-center">Misión</h3>
+        <p class="card-text">
+          Nuestra misión es ofrecer entretenimiento de primer nivel y momentos
+          inolvidables a través de la magia del cine. Nos esforzamos por
+          seleccionar cuidadosamente una variedad de películas de diferentes
+          géneros y estilos, para satisfacer los gustos de todos nuestros
+          espectadores. Además, nos comprometemos a proporcionar una experiencia
+          excepcional en cada visita, asegurándonos de que cada detalle, desde
+          la calidad de proyección hasta la comodidad de nuestros asientos, esté
+          diseñado pensando en el disfrute de nuestros invitados.
+        </p>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row mt-5">
+    <div class="col-3">
+      <p-card
+        header="Juan Ruben Bautista Rangel"
+        subheader="Socio 1"
+        [style]="{ width: '240px' }"
+      >
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/rr.jpeg" />
+        </ng-template>
+        <p
+          [ngClass]="{
+            'texto-grande': accService.letraGrandeBooleanServicio,
+            'texto-alineado': accService.alinearTextoBooleanServicio
+          }"
+        >
+          Emprendedor apasionado y visionario con un profundo amor por el mundo
+          del cine. Con una perspicacia empresarial excepcional, ha logrado
+          construir y hacer crecer su imperio cinematográfico, su compromiso con
+          la calidad y la innovación se refleja en cada aspecto del cine, desde
+          la selección de películas hasta las comodidades ofrecidas a los
+          espectadores.
+        </p>
+      </p-card>
+    </div>
+    <div class="col-3">
+      <p-card
+        header="Erick Eduardo Gonzalez Esparza"
+        subheader="Socio 2"
+        [style]="{ width: '240px' }"
+      >
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/ee.jpeg" />
+        </ng-template>
+        <p
+          [ngClass]="{
+            'texto-grande': accService.letraGrandeBooleanServicio,
+            'texto-alineado': accService.alinearTextoBooleanServicio
+          }"
+        >
+          Destacado por su capacidad para tomar decisiones audaces y mantenerse
+          al tanto de las últimas tendencias y tecnologías. Su carisma y
+          habilidades de comunicación le permiten establecer relaciones sólidas
+          con empleados y socios clave. Su enfoque en la calidad y la
+          experiencia del cliente impulsa su búsqueda constante de innovación.
+          Amante de Bladee y de Ritorukai de los alucines
+        </p>
+      </p-card>
+    </div>
+    <div class="col-3">
+      <p-card
+        header="Diego Alejandro Mendieta Medrano"
+        subheader="Socio 3"
+        [style]="{ width: '240px' }"
+      >
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/dd.jpeg" />
+        </ng-template>
+        <p
+          [ngClass]="{
+            'texto-grande': accService.letraGrandeBooleanServicio,
+            'texto-alineado': accService.alinearTextoBooleanServicio
+          }"
+        >
+          Con una mentalidad empresarial aguda y una visión a largo plazo, ha
+          desempeñado un papel fundamental en la expansión y crecimiento del
+          cine. Su capacidad para establecer relaciones sólidas con socios clave
+          ha permitido la creación de alianzas estratégicas beneficiosas para
+          ambas partes.
+        </p>
+      </p-card>
+    </div>
+    <div class="col-3">
+      <p-card
+        header="Victor Mauricio Diaz Castañeda"
+        subheader="Socio 4"
+        [style]="{ width: '240px' }"
+      >
+        <ng-template pTemplate="header">
+          <img alt="Card" src="../../assets/img/mau.jpg" />
+        </ng-template>
+        <p
+          [ngClass]="{
+            'texto-grande': accService.letraGrandeBooleanServicio,
+            'texto-alineado': accService.alinearTextoBooleanServicio
+          }"
+        >
+          Demuestra un fuerte sentido de responsabilidad social. Está
+          comprometido con promover el cine como una forma de arte y
+          entretenimiento que une a las personas y fomenta la diversidad
+          cultural. Colabora con organizaciones locales y sin fines de lucro
+          para organizar proyecciones especiales y eventos benéficos, brindando
+          acceso al cine a aquellos que pueden tener limitaciones económicas.
+        </p>
+      </p-card>
+    </div>
+    <div class="col-3">
+      <p-card
+        header="Ana Carolina De La Peña Gallegos"
+        subheader="Socio 5"
+        [style]="{ width: '240px' }"
+      >
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/caro.jpeg" />
+        </ng-template>
+        <p
+          [ngClass]="{
+            'texto-grande': accService.letraGrandeBooleanServicio,
+            'texto-alineado': accService.alinearTextoBooleanServicio
+          }"
+        >
+            Con una de las mejores visiones a corto plazo, su desarrollo 
+            dentro de los ambiente de tension hace que sea la candidata 
+            perfecta para cualquiere puesto gerencial.
+            Una excelente colaboradora por el gusto tan impulsivo por las
+            cintas romanticas
+        </p>
+      </p-card>
+    </div>
+
+    <div class="col-3">
+      <p-card
+        header="Alonso Prieto Omar"
+        subheader="Socio 6"
+        [style]="{ width: '240px' }"
+      >
+        <ng-template pTemplate="header">
+          <img alt="Card" src="../../assets/img/Omar.jpeg" />
+        </ng-template>
+        <p
+          [ngClass]="{
+            'texto-grande': accService.letraGrandeBooleanServicio,
+            'texto-alineado': accService.alinearTextoBooleanServicio
+          }"
+        >
+          Demuestra caracter a la hora de resolver problemas, es un gran
+          coolaborador, se define principalmente por sus valores y su etica
+          de trabajo, una persona muy puntual.
+          Con un desarrollo increible dentro de ambiente y su impecable
+          adaptacion a situaciones donde se debe debatir el futuro, lo
+          Convierte en un excelente socio y colaborador.
+        </p>
+      </p-card>
+    </div>
+
+    <h5
+      class="text-center mt-5 mb-5"
+      [ngClass]="{
+        'texto-grande': accService.letraGrandeBooleanServicio,
+        'texto-alineado': accService.alinearTextoBooleanServicio
+      }"
+    >
+      Este sitio forma parte de un proyecto académico, no está relacionado a
+      ningún negocio ni organización con fines de lucro.
+    </h5>
+
+    <h1 class="text-center mb-5 w-100">Preguntas frecuentes</h1>
+    <p class="text-center w-100">
+      <button
+        class="btn btn-primary btn-lg boton"
+        type="button"
+        data-toggle="collapse"
+        data-target="#Q1"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        ¿Es necesario registrarse para hacer una reservación?
+      </button>
+    </p>
+    <div class="collapse w-100 text-center" id="Q1">
+      <div
+        class="card card-body h5"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        Sí, es necesario registrarse en nuestro sistema para poder realizar la
+        reservación de una sala privada de cine.
+      </div>
+    </div>
+
+    <p class="text-center mt-3 w-100">
+      <button
+        class="btn btn-primary btn-lg boton"
+        type="button"
+        data-toggle="collapse"
+        data-target="#Q2"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        ¿Puedo elegir la película que se proyectará en la sala privada?
+      </button>
+    </p>
+    <div class="collapse mb-5 w-100 text-center" id="Q2">
+      <div
+        class="card card-body h5"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        Sí, puedes elegir la película que deseas ver de entre las opciones
+        disponibles en nuestro catálogo.
+      </div>
+    </div>
+
+    <p class="text-center mt-3 w-100">
+      <button
+        class="btn btn-primary btn-lg boton"
+        type="button"
+        data-toggle="collapse"
+        data-target="#Q3"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        ¿Cómo puedo saber qué películas están disponibles para reservar?
+      </button>
+    </p>
+    <div class="collapse mb-5 w-100 text-center" id="Q3">
+      <div
+        class="card card-body h5"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        En nuestro sistema de reservaciones, encontrarás un catálogo actualizado
+        con todas las películas disponibles para proyección en las salas
+        privadas.
+      </div>
+    </div>
+
+    <p class="text-center mt-3 w-100">
+      <button
+        class="btn btn-primary btn-lg boton"
+        type="button"
+        data-toggle="collapse"
+        data-target="#Q4"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        ¿Puedo elegir la sala en la que se proyectará la película?
+      </button>
+    </p>
+    <div class="collapse mb-5 w-100 text-center" id="Q4">
+      <div
+        class="card card-body h5"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        Sí, puedes seleccionar la sala privada de cine en la que te gustaría ver
+        la película, siempre y cuando esté disponible en la fecha y hora que
+        elijas.
+      </div>
+    </div>
+
+    <p class="text-center mt-3 w-100">
+      <button
+        class="btn btn-primary btn-lg boton"
+        type="button"
+        data-toggle="collapse"
+        data-target="#Q5"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        ¿Hay algún límite en el número de personas que pueden asistir a una
+        proyección en la sala privada de cine?
+      </button>
+    </p>
+    <div class="collapse mb-5 w-100 text-center" id="Q5">
+      <div
+        class="card card-body h5"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        Cada sala privada tiene un límite de capacidad establecido. Te
+        proporcionaremos información sobre el número máximo de personas
+        permitidas al momento de realizar la reservación.
+      </div>
+    </div>
+
+    <p class="text-center mt-3 w-100">
+      <button
+        class="btn btn-primary btn-lg boton"
+        type="button"
+        data-toggle="collapse"
+        data-target="#Q6"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        ¿Se ofrece servicio de alimentos y bebidas en las salas privadas de
+        cine?
+      </button>
+    </p>
+    <div class="collapse mb-5 w-100 text-center" id="Q6">
+      <div
+        class="card card-body h5"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        Sí, ofrecemos servicios de alimentos y bebidas en las salas privadas de
+        cine. Puedes elegir entre diferentes opciones de menú al hacer tu
+        reservación.
+      </div>
+    </div>
+    <p class="my-4 text-light">fse</p>
+  </div>
+
+  <div class="col-sm-6" style="background-color:rgb(135, 168, 173); font-family:'Metropolis' sans-serif; font-size: 20px; border-radius: 2%;  margin-left: 25%; width: 50%;">
+    <p style="text-align: center;">Salas Privadas</p>
+
+    <iframe
+    width="500"
+    height="315"
+    [src]="video | domseguro:'https://www.youtube.com/embed/' "
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+    <p> {{mensajeHi}} </p>
+    <app-hijo [tex]="'-'"  (eventoHijo)="onMensajeHij($event)"> </app-hijo>
+  </div>
+
+
+<br> 
+<br>
+  
+</div>

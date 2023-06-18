@@ -1,0 +1,105 @@
+<div class="container my-5">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Registro de reservaciones</h1>
+    <p class="fs-5 text-muted">
+      {{ dataUser?.displayName }}: {{ dataUser?.email || "N/A" }}
+    </p>
+  </div>
+  <div class="shadow">
+<p-table [columns]="columnas" [value]="citas" styleClass="p-datatable-striped" selectionMode="single">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th
+        *ngFor="let col of columns"
+        class="text-center"
+        (mouseenter)="leerTexto1($event)"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        {{ col }}
+      </th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-cita>
+    <tr>
+      <td
+        style="text-align: center"
+        (mouseenter)="leerTexto1($event)"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        {{ cita.nombre }}
+      </td>
+      <td
+        style="text-align: center"
+        (mouseenter)="leerTexto1($event)"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        {{ cita.correo }}
+      </td>
+      <td
+        style="text-align: center"
+        (mouseenter)="leerTexto1($event)"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        {{ cita.salaSel.slice(4) }}
+      </td>
+      <td
+        style="text-align: center"
+        (mouseenter)="leerTexto1($event)"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        {{ cita.nombrePel }}
+      </td>
+      <td
+        style="text-align: center"
+        (mouseenter)="leerTexto1($event)"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        {{ cita.date }}
+      </td>
+      <td
+        style="text-align: center"
+        (mouseenter)="leerTexto1($event)"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        <!--Aquí se muestra el QR-->
+      </td>
+      <td
+        style="text-align: center"
+        (mouseenter)="leerTexto1($event)"
+        [ngClass]="{
+          'texto-grande': accService.letraGrandeBooleanServicio,
+          'texto-alineado': accService.alinearTextoBooleanServicio
+        }"
+      >
+        <!--Aquí se pone el botón pa eliminar-->
+        <a href="javascript:void(0)" class="text-danger" (click)="eliminar2(cita.key)">
+          <i class="fa-solid fa-trash fa-1x"></i>
+        </a>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+</div>
+</div>
